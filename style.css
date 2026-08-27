@@ -1,1 +1,1915 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: #fff8f5;
+
+    color: #625763;
+
+    overflow-x: hidden;
+
+    transition: 0.4s;
+
+}
+
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================
+   FLOATING DECORATIONS
+========================= */
+
+.floating-decoration {
+
+    position: fixed;
+
+    z-index: -1;
+
+    opacity: 0.45;
+
+    font-size: 28px;
+
+}
+
+
+.decoration-1 {
+
+    top: 20%;
+
+    left: 3%;
+
+}
+
+
+.decoration-2 {
+
+    right: 4%;
+
+    top: 45%;
+
+}
+
+
+.decoration-3 {
+
+    bottom: 15%;
+
+    left: 8%;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    padding: 22px 7%;
+
+    background: rgba(255, 241, 242, 0.92);
+
+    border-bottom: 1px solid #efdce0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.logo > span {
+
+    font-size: 38px;
+
+}
+
+
+.logo h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    color: #786172;
+
+}
+
+
+.logo p {
+
+    font-size: 11px;
+
+    color: #9b8995;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+nav a {
+
+    color: #796977;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #c5879c;
+
+}
+
+
+.theme-button,
+.back-button {
+
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 25px;
+
+    background: #eadff1;
+
+    color: #685b6c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.theme-button:hover,
+.back-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(120, 90, 110, 0.15);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 600px;
+
+    padding: 80px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            #f8e4ee,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            #e7e1f3,
+            transparent 30%
+        ),
+
+        #fff8f5;
+
+}
+
+
+.hero-text {
+
+    max-width: 600px;
+
+}
+
+
+.small-title {
+
+    color: #b78194;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+}
+
+
+.hero h2,
+.page-hero h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.1;
+
+    color: #685966;
+
+    margin: 20px 0;
+
+}
+
+
+.hero h2 span,
+.page-hero h2 span {
+
+    color: #c8899f;
+
+    font-style: italic;
+
+}
+
+
+.hero-text p,
+.page-hero p {
+
+    line-height: 1.8;
+
+    color: #8d7d88;
+
+    max-width: 520px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.primary-button,
+.secondary-button {
+
+    padding: 14px 22px;
+
+    border-radius: 28px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.primary-button {
+
+    background: #dba8b9;
+
+    color: white;
+
+}
+
+
+.secondary-button {
+
+    background: #eee7f4;
+
+    color: #756577;
+
+}
+
+
+.primary-button:hover,
+.secondary-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(180, 120, 145, 0.2);
+
+}
+
+
+/* HERO DECORATION */
+
+.hero-decoration {
+
+    width: 340px;
+
+    height: 380px;
+
+    position: relative;
+
+    background: #f6dfe8;
+
+    border-radius: 45% 55% 45% 55%;
+
+    box-shadow: 15px 15px 0 #eee8f5;
+
+}
+
+
+.moon-stars {
+
+    position: absolute;
+
+    right: 50px;
+
+    top: 40px;
+
+    font-size: 55px;
+
+}
+
+
+.cloud {
+
+    position: absolute;
+
+    font-size: 45px;
+
+    opacity: 0.85;
+
+}
+
+
+.cloud-a {
+
+    top: 90px;
+
+    left: 30px;
+
+}
+
+
+.cloud-b {
+
+    bottom: 100px;
+
+    right: 30px;
+
+}
+
+
+.mini-book {
+
+    position: absolute;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 20px;
+
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.08);
+
+}
+
+
+.book-one {
+
+    background: #c8b6dd;
+
+    bottom: 80px;
+
+    left: 70px;
+
+}
+
+
+.book-two {
+
+    background: #e3a8b7;
+
+    bottom: 55px;
+
+    left: 115px;
+
+}
+
+
+.hero-quote {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(255,255,255,0.65);
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    width: max-content;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+
+    text-align: center;
+
+    padding: 80px 20px 40px;
+
+}
+
+
+.section-title span {
+
+    color: #d397ad;
+
+    font-size: 25px;
+
+}
+
+
+.section-title h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #6d5d6b;
+
+    font-size: 36px;
+
+    margin: 12px;
+
+}
+
+
+.section-title p {
+
+    color: #968590;
+
+}
+
+
+/* =========================
+   BOOK NOOK
+========================= */
+
+.book-nook {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 20px 90px;
+
+}
+
+
+.window-card,
+.bookshelf-card,
+.cozy-card {
+
+    background: #fff;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 12px 30px rgba(105, 75, 90, 0.08);
+
+}
+
+
+/* WINDOW */
+
+.window-card {
+
+    min-height: 390px;
+
+    background: #dcecf2;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.window-top {
+
+    height: 40%;
+
+    position: relative;
+
+}
+
+
+.sun {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 5px;
+
+    font-size: 50px;
+
+}
+
+
+.tiny-cloud {
+
+    font-size: 35px;
+
+    position: absolute;
+
+    left: 10px;
+
+    top: 45px;
+
+}
+
+
+.window-middle {
+
+    height: 25%;
+
+    border: 8px solid #f4eee8;
+
+    position: relative;
+
+}
+
+
+.window-divider {
+
+    position: absolute;
+
+    background: #f4eee8;
+
+}
+
+
+.vertical {
+
+    width: 8px;
+
+    height: 100%;
+
+    left: 50%;
+
+}
+
+
+.horizontal {
+
+    height: 8px;
+
+    width: 100%;
+
+    top: 50%;
+
+}
+
+
+.small-cloud {
+
+    font-size: 25px;
+
+    right: 15px;
+
+    bottom: 5px;
+
+}
+
+
+.window-bottom {
+
+    text-align: center;
+
+    padding-top: 25px;
+
+}
+
+
+.window-bottom p {
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.window-bottom a {
+
+    background: rgba(255,255,255,0.7);
+
+    color: #756373;
+
+    text-decoration: none;
+
+    padding: 9px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+
+/* BOOKSHELF */
+
+.bookshelf-card {
+
+    background: #e6c4ac;
+
+}
+
+
+.bookshelf-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.bookshelf-title h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #73594f;
+
+}
+
+
+.bookshelf-title a {
+
+    font-size: 12px;
+
+    color: #87665c;
+
+}
+
+
+.shelf {
+
+    border-bottom: 8px solid #bc9377;
+
+    padding: 10px 5px;
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 8px;
+
+}
+
+
+.book {
+
+    width: 38px;
+
+    border-radius: 5px 5px 0 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    transition: 0.3s;
+
+}
+
+
+.book:hover {
+
+    transform: translateY(-8px) rotate(-2deg);
+
+}
+
+
+.pastel-book-1 {
+
+    height: 85px;
+
+    background: #d7a4b6;
+
+}
+
+
+.pastel-book-2 {
+
+    height: 100px;
+
+    background: #b6a5cf;
+
+}
+
+
+.pastel-book-3 {
+
+    height: 75px;
+
+    background: #91b8b5;
+
+}
+
+
+.pastel-book-4 {
+
+    height: 95px;
+
+    background: #dba986;
+
+}
+
+
+.pastel-book-5 {
+
+    height: 90px;
+
+    background: #c3a6bd;
+
+}
+
+
+.pastel-book-6 {
+
+    height: 110px;
+
+    background: #d49ca5;
+
+}
+
+
+.shelf-caption {
+
+    font-size: 12px;
+
+    color: #765e58;
+
+    margin-top: 20px;
+
+    line-height: 1.5;
+
+}
+
+
+/* COZY CARD */
+
+.cozy-card {
+
+    text-align: center;
+
+    background: #f6edf3;
+
+}
+
+
+.cozy-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #766271;
+
+}
+
+
+.lamp-area {
+
+    position: relative;
+
+    margin: 25px;
+
+}
+
+
+.lamp-button {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 60px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.lamp-glow {
+
+    width: 100px;
+
+    height: 100px;
+
+    background: rgba(255, 228, 140, 0.3);
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: -15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.chair {
+
+    font-size: 95px;
+
+}
+
+
+.little-table {
+
+    background: #d8b39a;
+
+    width: 180px;
+
+    height: 45px;
+
+    margin: -15px auto 25px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    font-size: 30px;
+
+}
+
+
+.mug-button {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 35px;
+
+}
+
+
+.cozy-button {
+
+    display: inline-block;
+
+    background: #dfb0bf;
+
+    color: white;
+
+    padding: 11px 17px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+
+}
+
+
+.cozy-button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features-section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px 90px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.feature-card {
+
+    padding: 35px 25px;
+
+    background: #fff;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(110,80,100,0.07);
+
+    transition: 0.3s;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+.feature-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.feature-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #6d5c6a;
+
+    margin-bottom: 12px;
+
+}
+
+
+.feature-card p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #93828e;
+
+    margin-bottom: 18px;
+
+}
+
+
+.feature-card a {
+
+    text-decoration: none;
+
+    color: #c1879a;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+
+    text-align: center;
+
+    padding: 90px 20px;
+
+    background: #eee6f3;
+
+}
+
+
+.quote-section h2 {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(25px, 4vw, 40px);
+
+    font-style: italic;
+
+    color: #76677b;
+
+    line-height: 1.5;
+
+}
+
+
+.quote-icon {
+
+    font-size: 40px;
+
+    color: #c795aa;
+
+}
+
+
+.bottom-quote {
+
+    display: block;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   OTHER PAGES
+========================= */
+
+.page-main {
+
+    min-height: 700px;
+
+    padding: 70px 20px 90px;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #f7e6ed,
+            transparent 25%
+        ),
+
+        #fff9f6;
+
+}
+
+
+.page-hero {
+
+    text-align: center;
+
+    margin: 0 auto 55px;
+
+    max-width: 800px;
+
+}
+
+
+.page-hero p {
+
+    margin: auto;
+
+}
+
+
+/* =========================
+   GENRES
+========================= */
+
+.genre-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.genre-card {
+
+    background: white;
+
+    padding: 32px 22px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(100,70,90,0.07);
+
+    transition: 0.3s;
+
+}
+
+
+.genre-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.genre-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.genre-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #725f70;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.genre-card p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #94838e;
+
+    margin-bottom: 20px;
+
+}
+
+
+.genre-card button {
+
+    border: none;
+
+    background: #f0d9e2;
+
+    color: #785f6e;
+
+    padding: 11px 16px;
+
+    border-radius: 22px;
+
+    transition: 0.3s;
+
+}
+
+
+.genre-card button:hover {
+
+    background: #e6c3d0;
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================
+   RESULT CARDS
+========================= */
+
+.result-card {
+
+    max-width: 750px;
+
+    margin: 55px auto 0;
+
+    text-align: center;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    background: #eee5f2;
+
+    box-shadow: 0 12px 30px rgba(100,70,100,0.08);
+
+}
+
+
+.result-icon {
+
+    font-size: 40px;
+
+}
+
+
+.result-card h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #716176;
+
+    margin: 12px 0;
+
+}
+
+
+.result-card p {
+
+    line-height: 1.8;
+
+    color: #847486;
+
+}
+
+
+.library-decoration {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    font-size: 27px;
+
+    margin-top: 60px;
+
+}
+
+
+/* =========================
+   CHOICE PAGES
+========================= */
+
+.choice-section {
+
+    max-width: 850px;
+
+    margin: 25px auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(100,70,90,0.06);
+
+}
+
+
+.choice-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+
+}
+
+
+.choice-heading > span {
+
+    font-size: 40px;
+
+}
+
+
+.choice-heading h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #725f70;
+
+    font-size: 23px;
+
+}
+
+
+.choice-heading p {
+
+    font-size: 13px;
+
+    color: #988791;
+
+    margin-top: 4px;
+
+}
+
+
+.choice-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.day-choice,
+.cozy-option {
+
+    border: 1px solid #f0dfe6;
+
+    background: #fff9fb;
+
+    color: #725f70;
+
+    padding: 14px 18px;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+
+}
+
+
+.day-choice:hover,
+.cozy-option:hover {
+
+    background: #f3dce5;
+
+    transform: translateY(-3px);
+
+}
+
+
+.day-choice.selected,
+.cozy-option.selected {
+
+    background: #dba9ba;
+
+    color: white;
+
+}
+
+
+.perfect-result,
+.cozy-result {
+
+    margin-top: 55px;
+
+}
+
+
+#dayResult p,
+#cozyResult p {
+
+    margin: 10px 0;
+
+}
+
+
+.reset-button {
+
+    border: none;
+
+    background: #d9c6e5;
+
+    color: #685c70;
+
+    padding: 11px 20px;
+
+    border-radius: 22px;
+
+    margin-top: 18px;
+
+    transition: 0.3s;
+
+}
+
+
+.reset-button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 45px 7%;
+
+    background: #f4e4ea;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+footer h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #725f6e;
+
+    margin-bottom: 7px;
+
+}
+
+
+footer p {
+
+    font-size: 12px;
+
+    color: #917d8a;
+
+}
+
+
+.footer-heart {
+
+    color: #c8899f;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   NIGHT MODE
+========================= */
+
+body.night {
+
+    background: #302b3d;
+
+    color: #eee8f1;
+
+}
+
+
+body.night header {
+
+    background: #393347;
+
+    border-color: #51495e;
+
+}
+
+
+body.night .logo h1,
+body.night .hero h2,
+body.night .page-hero h2 {
+
+    color: #eee6f2;
+
+}
+
+
+body.night nav a {
+
+    color: #d9cfdf;
+
+}
+
+
+body.night .hero {
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            #493d57,
+            transparent 30%
+        ),
+
+        #302b3d;
+
+}
+
+
+body.night .hero-text p,
+body.night .page-hero p {
+
+    color: #c6bbc9;
+
+}
+
+
+body.night .hero-decoration {
+
+    background: #4b4058;
+
+    box-shadow: 15px 15px 0 #393242;
+
+}
+
+
+body.night .moon-stars {
+
+    font-size: 0;
+
+}
+
+
+body.night .moon-stars::after {
+
+    content: "🌙";
+
+    font-size: 55px;
+
+}
+
+
+body.night .section-title h2,
+body.night .page-hero h2 {
+
+    color: #eee6f2;
+
+}
+
+
+body.night .section-title p {
+
+    color: #c6bbc9;
+
+}
+
+
+body.night .page-main {
+
+    background: #302b3d;
+
+}
+
+
+body.night .feature-card,
+body.night .genre-card,
+body.night .choice-section {
+
+    background: #40394d;
+
+    box-shadow: none;
+
+}
+
+
+body.night .feature-card h3,
+body.night .genre-card h3,
+body.night .choice-heading h3 {
+
+    color: #eee4ef;
+
+}
+
+
+body.night .feature-card p,
+body.night .genre-card p,
+body.night .choice-heading p {
+
+    color: #c7bdcb;
+
+}
+
+
+body.night .result-card {
+
+    background: #494154;
+
+}
+
+
+body.night .result-card h2 {
+
+    color: #eee6f2;
+
+}
+
+
+body.night .result-card p {
+
+    color: #d0c5d4;
+
+}
+
+
+body.night .window-card {
+
+    background: #4e526b;
+
+}
+
+
+body.night .window-bottom {
+
+    color: white;
+
+}
+
+
+body.night .cozy-card {
+
+    background: #453d50;
+
+}
+
+
+body.night .quote-section {
+
+    background: #413a4d;
+
+}
+
+
+body.night .quote-section h2 {
+
+    color: #eee6f2;
+
+}
+
+
+body.night footer {
+
+    background: #393347;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .book-nook {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+    }
+
+
+    .features-section {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+    }
+
+
+    .genre-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    header {
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+
+    nav {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 20px;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-decoration {
+
+        width: 290px;
+
+        height: 330px;
+
+    }
+
+
+    .genre-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 400px;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo {
+
+        justify-content: center;
+
+    }
+
+
+    .logo h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    nav {
+
+        gap: 12px;
+
+    }
+
+
+    nav a {
+
+        font-size: 12px;
+
+    }
+
+
+    .choice-section {
+
+        padding: 23px 15px;
+
+    }
+
+
+    .choice-heading {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .choice-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .day-choice,
+    .cozy-option {
+
+        width: 100%;
+
+    }
+
+}
 

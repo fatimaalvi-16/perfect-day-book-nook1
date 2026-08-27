@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Perfect Day | A Perfect Day</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="floating-decoration decoration-1">☀️</div>
+    <div class="floating-decoration decoration-2">✿</div>
+
+    <header>
+
+        <div class="logo">
+
+            <span>📚</span>
+
+            <div>
+
+                <h1>A Perfect Day</h1>
+
+                <p>your little escape into books & cozy moments ♡</p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="books.html">Library</a>
+            <a href="perfect-day.html">Perfect Day</a>
+            <a href="cozy-corner.html">Cozy Corner</a>
+
+        </nav>
+
+
+        <a href="index.html" class="back-button">
+            ← Back Home
+        </a>
+
+    </header>
+
+
+    <main class="page-main">
+
+        <section class="page-hero">
+
+            <span class="small-title">
+                ✦ CREATE YOUR DREAM DAY ✦
+            </span>
+
+            <h2>
+                What does your
+                <span>perfect day</span>
+                look like?
+            </h2>
+
+            <p>
+                Choose one option from every part of the day.
+            </p>
+
+        </section>
+
+
+        <!-- MORNING -->
+
+        <section class="choice-section">
+
+            <div class="choice-heading">
+
+                <span>🌅</span>
+
+                <div>
+
+                    <h3>Good Morning</h3>
+
+                    <p>How would you like your day to begin?</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="choice-buttons">
+
+                <button class="day-choice"
+                    data-choice="morning"
+                    data-value="A slow morning with warm sunlight and a delicious breakfast.">
+
+                    ☀️ Slow Morning
+
+                </button>
+
+
+                <button class="day-choice"
+                    data-choice="morning"
+                    data-value="A peaceful morning curled up with a book and a warm drink.">
+
+                    📖 Reading Morning
+
+                </button>
+
+
+                <button class="day-choice"
+                    data-choice="morning"
+                    data-value="An exciting morning exploring somewhere new.">
+
+                    🗺️ Adventure Morning
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- AFTERNOON -->
+
+        <section class="choice-section">
+
+            <div class="choice-heading">
+
+                <span>☀️</span>
+
+                <div>
+
+                    <h3>A Lovely Afternoon</h3>
+
+                    <p>What would you like to do?</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="choice-buttons">
+
+                <button class="day-choice"
+                    data-choice="afternoon"
+                    data-value="Spend the afternoon reading somewhere beautiful and peaceful.">
+
+                    📚 Read
+
+                </button>
+
+
+                <button class="day-choice"
+                    data-choice="afternoon"
+                    data-value="Go outside and explore with your favorite people.">
+
+                    🌸 Explore
+
+                </button>
+
+
+                <button class="day-choice"
+                    data-choice="afternoon"
+                    data-value="Spend time creating something you love.">
+
+                    🎨 Create
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENING -->
+
+        <section class="choice-section">
+
+            <div class="choice-heading">
+
+                <span>🌙</span>
+
+                <div>
+
+                    <h3>A Cozy Evening</h3>
+
+                    <p>How should your beautiful day end?</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="choice-buttons">
+
+                <button class="day-choice"
+                    data-choice="evening"
+                    data-value="Watch the sunset while listening to your favorite music.">
+
+                    🌅 Sunset
+
+                </button>
+
+
+                <button class="day-choice"
+                    data-choice="evening"
+                    data-value="Have a cozy evening followed by your favorite movie.">
+
+                    🎬 Movie Night
+
+                </button>
+
+
+                <button class="day-choice"
+                    data-choice="evening"
+                    data-value="End the day reading underneath warm fairy lights.">
+
+                    📖 Night Reading
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section class="perfect-result result-card">
+
+            <span class="result-icon">🌷</span>
+
+            <h2>Your Perfect Day</h2>
+
+            <div id="dayResult">
+
+                <p>
+                    Choose one option from every section
+                    to create your perfect day. ♡
+                </p>
+
+            </div>
+
+
+            <button id="resetDay" class="reset-button">
+
+                🔄 Start Again
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+
+            <h3>📚 A Perfect Day</h3>
+
+            <p>
+                Every day deserves a little magic. ✨
+            </p>
+
+        </div>
+
+        <p class="footer-heart">♡ ♡ ♡</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
